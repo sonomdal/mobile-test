@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모바일 최적화 웹사이트</title>
+    <title>여수 & 이순신</title>
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <h1>모바일 최적화 웹사이트</h1>
-    <p>이 웹사이트는 모바일 기기에서도 잘 보이도록 설계되었습니다. 검은 배경에 흰색 텍스트를 사용하여 가독성을 높였습니다.</p>
-    <button id="toggleButton">텍스트 크기 변경</button>
+    <div class="container">
+        <div class="title-container">
+            <h1>여수<span class="circle" data-target="map"></span></h1>
+            <h1>&<span class="circle" data-target="review"></span></h1>
+            <h1>이순신<span class="circle" data-target="about"></span></h1>
+        </div>
+        <div class="content-container">
+            <h2 id="map">Map</h2>
+            <h2 id="review">Review</h2>
+            <h2 id="about">About</h2>
+        </div>
+    </div>
+    <div class="custom-cursor"></div>
     <script src="test.js"></script>
 </body>
 </html>
