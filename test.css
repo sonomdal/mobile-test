@@ -86,47 +86,57 @@ body.active .custom-cursor {
     background-color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 10px;
+    }
+
     .title-container {
+        padding-left: 0;
+    }
+
+    .title-item {
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
     .circle {
-        display: inline-block;
-        margin-top: 5px;
-        position: absolute;
-        bottom: 0;
-        right: -30px;
+        position: static;
+        margin-top: 10px;
     }
 
-    h1 {
-        position: relative;
-        font-size: 50px;
-        margin-bottom: 60px;
+    .title-item.active h1,
+    .title-item.active h2 {
+        color: black;
     }
 
-    .content-container {
-        display: none;
-    }
-
-    .content-container h2 {
-        display: block !important;
-        font-size: 20px !important;
-        color: white !important;
-        margin-top: -30px;
-        margin-bottom: 40px;
-        position: relative;
-        text-align: center;
-    }
-
-    .custom-cursor {
-        display: none;
-    }
-
-    body {
+    .title-item.active .circle {
         background-color: black;
-        color: white;
+        border-color: black;
+    }
+
+    body.active {
+        background-color: white;
     }
 }
