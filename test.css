@@ -12,7 +12,6 @@ body {
     color: white;
     font-family: 'Freesentation-9Black', sans-serif;
     transition: background-color 0.3s;
-    cursor: none;
 }
 
 .container {
@@ -61,31 +60,13 @@ h1 {
 
 h2 {
     font-size: 80px;
-    display: none;
-    color: black;
-    opacity: 0;
-    transition: opacity 0.3s;
+    display: inline-block;
+    color: white;
+    opacity: 1;
+    transition: color 0.3s;
 }
 
-.custom-cursor {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: background-color 0.3s;
-}
-
-body.active {
-    background-color: white;
-}
-
-body.active .custom-cursor {
-    background-color: black;
-}
-
+/* 모바일 기기에서만 적용되는 스타일 */
 @media (max-width: 768px) {
     body {
         overflow-y: auto;
